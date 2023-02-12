@@ -6,18 +6,15 @@ const galleryMarkup = createGalleryMarkup(galleryItems);
 
 gallery.innerHTML = galleryMarkup;
 
-// gallery.addEventListener("click", (evt) => {
-//   const link = evt.target.getAttribute("data-source");
-//   evt.preventDefault();
-
-  
-// });
-gallery.addEventListener('click', () => {
-    const instance = basicLightbox.create(`
-    <img src="https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg" width="800" height="600">
+gallery.addEventListener("click", (evt) => {
+  const link = evt.target.getAttribute("data-source");
+  evt.preventDefault();
+  const instance = basicLightbox.create(`
+  <img src="${link}" width="800" height="600">
 `);
   instance.show();
 });
+
 function createGalleryMarkup(items) {
   return items
     .map(
