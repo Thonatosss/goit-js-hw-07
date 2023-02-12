@@ -25,5 +25,5 @@ function createGalleryMarkup(items) {
         </a>
         </div>`
     )
-    .join();
+    .join("");
 }
