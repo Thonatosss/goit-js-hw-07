@@ -5,8 +5,6 @@ const galleryList = document.querySelector(".gallery");
 
 galleryList.innerHTML = galleryMarkup;
 new SimpleLightbox(".gallery a", {
-     overlay: true,
-     captions: true,
      captionSelector: 'img',
      captionsData: 'alt',
      captionPosition: 'bottom',
